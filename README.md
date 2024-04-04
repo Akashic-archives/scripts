@@ -1,3 +1,3 @@
-# bash-scripts
+# scripts
 
 Some scripts.
