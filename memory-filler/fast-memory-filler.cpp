@@ -2,6 +2,6 @@
 int main()
 {
 	for (;;) {
-		malloc(1024*1000);
+		malloc(65536*100);
 	}
 }
