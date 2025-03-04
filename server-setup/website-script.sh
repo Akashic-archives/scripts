@@ -1,7 +1,7 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt install vim tmux git ranger btop stress tree time command-not-found ffmpeg sl neofetch iperf3 fzf uptimed fail2ban
+sudo apt install vim tmux git ranger btop stress tree time command-not-found ffmpeg sl neofetch iperf3 fzf uptimed fail2ban speedtest-cli
 sudo apt autoremove
 
 # ssh to add if needed
