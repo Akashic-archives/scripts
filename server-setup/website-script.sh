@@ -4,7 +4,8 @@ sudo apt upgrade
 sudo apt install vim tmux git ranger btop stress tree time command-not-found ffmpeg sl neofetch iperf3 fzf uptimed fail2ban speedtest-cli
 sudo apt autoremove
 
-# ssh to add if needed
+# ssh to add if needed, to modify
+echo "ssh-copy-id rasp.local form devices that need it."
 
 echo "*/20 * * * * speedtest-cli --csv >> /home/momo/speedtest/speedtest.csv" | crontab -
 
