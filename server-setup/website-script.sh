@@ -26,3 +26,28 @@ sudo systemctl restart fail2ban.service
 
 # setup website with nginx and everything before crontab, for now html website
 
+# change files:
+#
+# /etc/nginx/nginx.conf
+# in http {}
+# personnal settings
+# limit_req_zone $binary_remote_addr zone=mylimit:10m rate=10r/s;
+# possible que j'oublie ca
+#
+# /etc/nginx/site-a/defaut
+#
+ location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	        limit_req zone=limitbots burst=20 nodelay;
+
+	}
+
+	location ~* \.php$ {
+    		return 444;
+	}
+
+
+
+
