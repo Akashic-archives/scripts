@@ -12,6 +12,6 @@ sudo apt update && sudo apt install -y wget acpi-call
 And for the script to install it:
 
 ```shell
-curl -L https://raw.githubusercontent.com/Akashic-archives/scripts/refs/heads/main/battmngr/install.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/Akashic-archives/scripts/refs/heads/main/battmngr/install.sh | sudo bash
 ```
 
