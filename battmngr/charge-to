@@ -1,29 +1,67 @@
 #!/bin/bash
 
-charge_to=$1
+# Small script to charge a lenovo ideapad flex 5 14ARE95 to a certain percentage.
+# Tested on debian bookworm with gnome, if the computer goes in the suspend mode, it will over-charge it.
+# https://github.com/Akashic-archives/scripts/tree/main/battmngr
 
+
+
+# Variables
+charge_to=$1
 battery_now=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}' | tr -d '%')
 
+
+
+# Check if sudo
+if (( $(id -u) != 0 )); then
+	echo "Please use sudo."
+	exit 1
+fi
+
+
+
+# Check for parameter conformity
+if [ ! -z "$1" ]; then 
+	if ! [[ $1 =~ ^[0-9]+$ ]]; then
+		echo "Give a percentage."
+		echo "Exemple: charge-to 70"
+		exit 1
+	fi
+else
+	echo "Give a percentage."
+	echo "Exemple: charge-to 70"
+	exit 1
+fi
+
+
+# Mount acpi_call module
+modprobe acpi_call
+
+
+
+# Function to handle sigs, it can handle 1, 2, 3, 6, 14, 15, 20, 30. I tested with 1 and 3.
 function handle_sigs()
 {
-    /usr/local/bin/battmngr -sc 3
+    echo '\_SB.PCI0.LPC0.EC0.VPC0.SBMC 0x03' > /proc/acpi/call
     echo "I stopped charging because of sig"
-    exit
+    exit 0
 }
-
 trap handle_sigs 1 2 3 6 14 15 20 30
 
-/usr/local/bin/battmngr -sc 4
+
+
+# Start charging
+echo '\_SB.PCI0.LPC0.EC0.VPC0.SBMC 0x05' > /proc/acpi/call
 
 while true
 do
     echo "I'm charging"
     battery_now=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}' | tr -d '%')
-    echo "$battery_now"
+    echo "$battery_now%"
     if [ "$battery_now" -ge "$charge_to" ]; then
-	    /usr/local/bin/battmngr -sc 3
+    	    echo '\_SB.PCI0.LPC0.EC0.VPC0.SBMC 0x03' > /proc/acpi/call
 	    echo "charged to $charge_to"
-	    exit
+	    exit 0
     fi
     sleep 10
 done
