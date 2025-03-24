@@ -55,7 +55,7 @@ echo '\_SB.PCI0.LPC0.EC0.VPC0.SBMC 0x05' > /proc/acpi/call
 
 while true
 do
-    echo "I'm charging"
+    echo "I'm charging to $charge_to"
     battery_now=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}' | tr -d '%')
     echo "$battery_now%"
     if [ "$battery_now" -ge "$charge_to" ]; then
