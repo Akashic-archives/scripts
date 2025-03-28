@@ -43,7 +43,7 @@ modprobe acpi_call
 function handle_sigs()
 {
     echo '\_SB.PCI0.LPC0.EC0.VPC0.SBMC 0x03' > /proc/acpi/call
-    echo "I stopped charging because of sig"
+    echo "I stopped charging at $charge_to because of sig"
     exit 0
 }
 trap handle_sigs 1 2 3 6 14 15 20 30
