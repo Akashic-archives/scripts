@@ -2,6 +2,9 @@
 sudo apt update
 sudo apt install vim tmux git ranger git-man wget curl btop grep bash-completion zip unzip gzip python3.8 debian-cd debianutils coreutils diffutils dirmngr make cmake cmake-data man-db manpages manpages-dev tldr feh file foremost binwalk ncdu lsof iftop iotop powertop stress build-essential tar tree time testdisk nautilus duplicity i3lock gimp dkms dpkg dpkg-dev chromium-browser exfat-utils emacs libreoffice less head g++ gcc cpp crunch baobab command-not-found automake autopsy catdoc ffmpeg iproute2 java-common logsave qbittorrent unattended-upgrades upower cmatrix caca-utils sl sed awk whereami parallel vlc cowsay oneko lolcat fortune-mod fortunes-min fakeroot info john apache2 livebuild flatpak xsnow neofetch fastfetch neowofetch iperf3 ethtool sysstat ccze units fzf uptimed cryptsetup vnstat ntp wireguard resolvconf
 
+curl -fsS https://dl.brave.com/install.sh | sh
+# brave install
+
 
 tlp (battery management)
 stress (stress cpu/gpu)
@@ -20,7 +23,6 @@ curl https://raw.githubusercontent.com/sergiolepore/ChristBASHTree/master/tree-E
 openshot-qt
 vitals
 ext4-terminal
-brave
 gimp
 ranger
 fail2ban
