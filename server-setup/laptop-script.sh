@@ -5,6 +5,9 @@ sudo apt install vim tmux git ranger git-man wget curl btop grep bash-completion
 curl -fsS https://dl.brave.com/install.sh | sh
 # brave install
 
+sudo apt install xfce4-terminal
+cp config-files/terminalrc ~/.config/xfce4/terminal/terminalrc
+
 
 tlp (battery management)
 stress (stress cpu/gpu)
