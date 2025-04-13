@@ -2,11 +2,29 @@
 sudo apt update
 sudo apt install vim tmux git ranger git-man wget curl btop grep bash-completion zip unzip gzip python3.8 debian-cd debianutils coreutils diffutils dirmngr make cmake cmake-data man-db manpages manpages-dev tldr feh file foremost binwalk ncdu lsof iftop iotop powertop stress build-essential tar tree time testdisk nautilus duplicity i3lock gimp dkms dpkg dpkg-dev chromium-browser exfat-utils emacs libreoffice less head g++ gcc cpp crunch baobab command-not-found automake autopsy catdoc ffmpeg iproute2 java-common logsave qbittorrent unattended-upgrades upower cmatrix caca-utils sl sed awk whereami parallel vlc cowsay oneko lolcat fortune-mod fortunes-min fakeroot info john apache2 livebuild flatpak xsnow neofetch fastfetch neowofetch iperf3 ethtool sysstat ccze units fzf uptimed cryptsetup vnstat ntp wireguard resolvconf
 
-curl -fsS https://dl.brave.com/install.sh | sh
 # brave install
+curl -fsS https://dl.brave.com/install.sh | sh
 
+# xfce4-terminal install
 sudo apt install xfce4-terminal
 cp config-files/terminalrc ~/.config/xfce4/terminal/terminalrc
+# unlimited scrollback, show unsafe past dialog, transparent background, opacity 0.58, display menubar in new windows, display borders around new windows
+# TODO: finish dot files
+
+# compile kernel last stable (14 for now, TODO: to automate (variables))
+sudo apt install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison make menuconfig packaging-dev
+mkdir kernel-compilation
+cd kernel-compilation
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.14.1.tar.xz
+tar -xf linux-6*
+cd linux*
+# TODO: change to latest config file
+cp /boot/config-6.1.0-32-amd64 .config
+# TODO: fill config file auto
+nice make -j`nproc` bindeb-pkg
+# TODO: figure out how to install it
+
+
 
 
 tlp (battery management)
