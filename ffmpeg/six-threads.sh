@@ -5,6 +5,7 @@ mkdir -p "../output"
 encode_video() {
 	local file="$1"
 	ffmpeg -i "$file" -c:v libx265 -c:a copy ../output/"${file%.mp4}.mp4"
+}
 
 export -f encode_video
 
