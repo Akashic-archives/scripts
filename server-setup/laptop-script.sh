@@ -19,7 +19,9 @@ wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.14.1.tar.xz
 tar -xf linux-6*
 cd linux*
 # TODO: change to latest config file
-cp /boot/config-6.1.0-32-amd64 .config
+# cp /boot/config-6.1.0-32-amd64 .config
+make distclean
+make olddefconfig
 # TODO: fill config file auto
 nice make -j`nproc` bindeb-pkg
 # TODO: figure out how to install it
