@@ -25,6 +25,7 @@ sudo systemctl restart fail2ban.service
 # install yt-dlp, no idea how, scp?
 
 # setup website with nginx and everything before crontab, for now html website
+# wget update-website.sh
 
 # change files:
 #
