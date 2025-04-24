@@ -26,6 +26,7 @@ sudo systemctl restart fail2ban.service
 
 # setup website with nginx and everything before crontab, for now html website
 # wget update-website.sh
+# wget update-certbot.sh
 
 # change files:
 #
