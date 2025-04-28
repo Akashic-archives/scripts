@@ -120,3 +120,7 @@ sudo systemctl restart fail2ban.service
 
 # install yt-dlp, no idea how, scp?
 
+
+# TODO: determiner si j'ai besoin d'un script windows
+# overwolf et curseforge pour minecraft mod
+
