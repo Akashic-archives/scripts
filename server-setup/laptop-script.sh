@@ -27,6 +27,11 @@ nice make -j`nproc` bindeb-pkg
 # TODO: figure out how to install it
 
 
+# repo for files that i need
+wget repo
+mv repo /usr/local/bin
+
+
 
 
 tlp (battery management)
