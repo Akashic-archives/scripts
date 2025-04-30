@@ -20,7 +20,7 @@ scp momo.local:test/rasp/home/momo/rsync.sh .
 scp momo.local:test/rasp/home/momo/.bash_aliases .
 
 sudo mkdir /media/momo
-sudo chown momo /media/momo
+sudo chown momo:momo /media/momo
 
 lsblk
 sudo mount /dev/sda1 /media/momo
