@@ -34,6 +34,10 @@ sudo vim /etc/fail2ban/jail.local
 echo -e "[sshd]\nbackend=systemd\nenabled=true" | sudo tee /etc/fail2ban/jail.local
 sudo systemctl restart fail2ban.service
 
-# install yt-dlp, no idea how, scp?
+# install yt-dlp
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64
+mv yt-dlp_linux_aarch64 yt-dlp
+chmod +x yt-dlp
+sudo mv yt-dlp /usr/local/bin/
 
 
