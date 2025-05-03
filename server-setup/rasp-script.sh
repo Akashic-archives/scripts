@@ -11,6 +11,7 @@ ssh-copy-id desktop
 ssh-copy-id mhamed.dev
 # ssh-copy-id momo.local into rasp.local
 # ssh-copy-id desktop into rasp.local
+# ssh-copy-id framework into rasp.local
 
 echo -e "*/20 * * * * speedtest-cli --csv >> /home/momo/speedtest/speedtest.csv\n*/20 * * * * curl icanhazip.com > /home/momo/ip.txt && scp /home/momo/ip.txt mhamed.dev:home-ip.txt" | crontab -
 
@@ -40,4 +41,8 @@ mv yt-dlp_linux_aarch64 yt-dlp
 chmod +x yt-dlp
 sudo mv yt-dlp /usr/local/bin/
 
+
+# unblock the voltage limit, for now manually, 
+# TODO: find a way to do it automatically
+sudo raspi-config
 
