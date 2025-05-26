@@ -65,7 +65,11 @@ wireshark
 
 # install yt-dlp, no idea how, scp?
 
+# vimrc
 cp /usr/share/vim/vim90/defaults.vim .vimrc && echo "set ts=4" >> .vimrc
+
+# audio increment
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 2
 
 
 # TODO: determiner si j'ai besoin d'un script windows
