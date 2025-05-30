@@ -71,6 +71,9 @@ cp /usr/share/vim/vim90/defaults.vim .vimrc && echo "set ts=4" >> .vimrc
 # audio increment
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 2
 
+# neovim
+# reference: https://www.reddit.com/r/debian/comments/188d3wc/neovim_on_debian/
+
 
 # TODO: determiner si j'ai besoin d'un script windows
 # overwolf et curseforge pour minecraft mod
