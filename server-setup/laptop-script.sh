@@ -73,7 +73,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 2
 
 # neovim
 # reference: https://www.reddit.com/r/debian/comments/188d3wc/neovim_on_debian/
-
+git clone --depth 1 https://github.com/neovim/neovim/
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
 # TODO: determiner si j'ai besoin d'un script windows
 # overwolf et curseforge pour minecraft mod
