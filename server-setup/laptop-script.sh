@@ -82,9 +82,11 @@ cpack -G DEB
 sudo dpkg -i --force-overwrite  nvim-linux64.deb
 cd ~
 rm -rf neovim
-#nvchad
+# nvchad
 git clone https://github.com/NvChad/starter ~/.config/nvim
-
+# patch so the curser stays in between sessions
+# https://github.com/NvChad/NvChad/issues/854
+# TODO: find where to put the patch and how.
 
 # TODO: determiner si j'ai besoin d'un script windows
 # overwolf et curseforge pour minecraft mod
