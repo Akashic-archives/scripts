@@ -1,7 +1,7 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt install vim tmux git ranger btop stress tree time command-not-found ffmpeg sl neofetch iperf3 fzf uptimed cryptsetup fail2ban instaloader speedtest-cli vnstat
+sudo apt install vim tmux git ranger btop stress tree time command-not-found ffmpeg sl neofetch iperf3 fzf uptimed cryptsetup fail2ban instaloader speedtest-cli vnstat nethogs
 sudo apt autoremove
 
 ssh-keygen -t ed25519 -a 100
