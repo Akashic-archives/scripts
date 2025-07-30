@@ -91,3 +91,5 @@ git clone https://github.com/NvChad/starter ~/.config/nvim
 # TODO: determiner si j'ai besoin d'un script windows
 # overwolf et curseforge pour minecraft mod
 
+# TODO: grub customizer with memtest86+ and background
+
