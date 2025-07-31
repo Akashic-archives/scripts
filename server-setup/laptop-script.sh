@@ -92,4 +92,7 @@ git clone https://github.com/NvChad/starter ~/.config/nvim
 # overwolf et curseforge pour minecraft mod
 
 # TODO: grub customizer with memtest86+ and background
-
+# github pubkey copy
+# discord
+# gpg
+#
