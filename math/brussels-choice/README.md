@@ -7,3 +7,5 @@ ex: 112 -> 16 -> 8 -> 4 -> 2 -> 1 in 6-1 steps
 
 https://www.youtube.com/watch?v=AeqK96UX3rA
 
+the naive method has a bug, if can return the number after 2 steps.
+
