@@ -49,6 +49,17 @@ sudo systemctl restart fail2ban.service
 	location ~* \.php$ {
     		return 444;
 	}
+}
+
+
+sudo apt install ufw
+sudo ufw allow 22/tcp
+80/tcp 443/tcp and other ports
+sudo ufw limit 22/tcp
+sudo ufw enable
+sudo ufw status numbered
+sudo cat /etc/ufw/user.rules
+
 
 
 
