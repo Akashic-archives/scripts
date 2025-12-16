@@ -41,6 +41,10 @@ mv yt-dlp_linux_aarch64 yt-dlp
 chmod +x yt-dlp
 sudo mv yt-dlp /usr/local/bin/
 
+# disable swap so the risk of sd card wear is lower.
+sudo dphys-swapfile swapoff
+sudo systemctl disable dphys-swapfile
+
 
 # unblock the voltage limit, for now manually, 
 # TODO: find a way to do it automatically
