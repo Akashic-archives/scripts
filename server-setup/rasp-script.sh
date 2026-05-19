@@ -1,7 +1,7 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt install vim tmux git ranger btop stress tree time command-not-found ffmpeg sl neofetch iperf3 fzf uptimed cryptsetup fail2ban instaloader speedtest-cli vnstat nethogs
+sudo apt install vim tmux git ranger btop stress tree time command-not-found ffmpeg sl neofetch iperf3 fzf uptimed cryptsetup fail2ban instaloader speedtest-cli vnstat nethogs wireguard
 sudo apt autoremove
 
 ssh-keygen -t ed25519 -a 100
@@ -45,6 +45,12 @@ sudo mv yt-dlp /usr/local/bin/
 sudo dphys-swapfile swapoff
 sudo systemctl disable dphys-swapfile
 
+echo -e "momo\tALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/fail2ban/jail.local
+
+# configure wireguard manually for security
+
+# docker on their website for debian
+# to launch navidrome
 
 # unblock the voltage limit, for now manually, 
 # TODO: find a way to do it automatically
