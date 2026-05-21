@@ -40,6 +40,8 @@ wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarc
 mv yt-dlp_linux_aarch64 yt-dlp
 chmod +x yt-dlp
 sudo mv yt-dlp /usr/local/bin/
+# to add
+# deno with curl -fsSL https://deno.land/install.sh | sh
 
 # disable swap so the risk of sd card wear is lower.
 sudo dphys-swapfile swapoff
